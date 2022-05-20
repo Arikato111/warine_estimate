@@ -7,3 +7,8 @@ when use if you need to create new file in page folder don't forgot to add in pa
 if use MySQL Database , Must use $GLOBALS['conn'] instead of $conn
 
 if want to change title, use JavaScript 
+
+the order of path : localhost/0/1/2/3/4
+
+if want to have more path than 0 , you have to use /0/: and check in function by CheckPath 
+if want to get value from path you can use useParams() and can input the order of path
