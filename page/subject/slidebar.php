@@ -28,7 +28,6 @@ function slideBar(){
       }
 
       function getUserInformation(){
-        return "";
         $user = [
           "name"=>"Alexander Pierce",
           "img"=>"https://adminlte.io/themes/v3/dist/img/user2-160x160.jpg",

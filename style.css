@@ -1,3 +1,13 @@
 .box {
     padding: 10px;
 }
+
+.people {
+    width: 170px;
+    height: 230px;
+    display: inline-block;
+    background-color: green;
+    margin: 10px;
+    border-radius: 5px;
+    color: black;
+}

@@ -5,9 +5,7 @@ function RootContent(){
     // set page //
     switch(CheckPath()){ // check path
         case "/contact":
-                return ContactPage();
-            case "/contact":
-                return ContactPage();
+            return ContactPage();
         case "/about": 
             return AboutPage();
         case '/':
