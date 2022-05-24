@@ -2,10 +2,13 @@
 function ContactPage(){
     function fromInput(){
         return title("Contact | Input") 
+        .'<div class="box">'
         . '<form action="/contact">
-            <input type="text" name="user">
-            <button type="submit">submit</button>
-        </form>';
+        <input type="text" name="user">
+        <button type="submit">submit</button>
+        </form>
+        </div>'
+        ;
     }
 
     function processInput(){

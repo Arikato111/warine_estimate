@@ -11,11 +11,17 @@ function HomePage()
     ";
     }
     $content = $content
+      . '<div class="box-people">'
       . '<a href="#">
-   <div class="people" style="' . $div_style . '">'.$i.'</div>
-   </a>';
+   <div class="people" style="' . $div_style . '">
+   <div class="box-img">
+        <img src="https://register.rmutsb.ac.th/th/userfiles/images/img-student/2560/600712/600707-2.jpg" alt="image profile">
+   </div>
+   <div style="color: pink;">{name}</div>
+   <div style="color: lightgreen;">{vote status}</div>
+   </div>
+   </a></div>';
   }
-
   return title("Home") . '<div class="box">'
     . $content
     . '</div>';
