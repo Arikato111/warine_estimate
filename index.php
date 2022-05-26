@@ -20,7 +20,7 @@ require("./path.php");
     <link rel="stylesheet" href="https://adminlte.io/themes/v3/plugins/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/css/adminlte.min.css">
     <!-- link css -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
 
 <body>
     <div class="wrapper">
@@ -30,7 +30,7 @@ require("./path.php");
             <?php echo RootContent(); ?>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="/script.js"></script>
     <!-- popper -->
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <!-- jquery -->
