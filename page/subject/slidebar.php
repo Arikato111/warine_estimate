@@ -46,12 +46,12 @@ function slideBar(){
 
   
 
-    return '<aside class="main-sidebar sidebar-dark-primary elevation-4">
+    return '<aside style="background-color: white;border-radius: 5px;border:white;position: fixed;" class="main-sidebar elevation-4">
     <!-- Brand Logo -->
     <a href="/" class="brand-link">
       <img src="/images/icon.png" alt="Warin Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
-      <span class="brand-text font-weight-light">warinice</span>
+      <span style="color: black;" class="brand-text font-weight-dark">warinice</span>
     </a>
   
     <!-- Sidebar -->'
@@ -75,10 +75,20 @@ function slideBar(){
               </p>
             </a>
           </li>
+          <li class="nav-item">
+          <a href="/logout" class="nav-link">
+            <p>
+             <div style="text-align: center;">Logout</div>
+            </p>
+          </a>
+        </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->
-  </aside>';
+  </aside>
+  <br>
+  <div style="margin: 20px 0;"></div>
+  ';
   }

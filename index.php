@@ -23,12 +23,8 @@ require("./path.php");
     <link rel="stylesheet" href="/style.css">
 
 <body>
-    <div class="wrapper">
-        <?php echo headSub() ?>
-        <?php echo slideBar() ?>
-        <div class="content-wrapper" style="min-height: 1329.62px;">
-            <?php echo RootContent(); ?>
-        </div>
+    <div>
+        <?php echo RootContent(); ?>
     </div>
     <script src="/script.js"></script>
     <!-- popper -->
