@@ -1,6 +1,6 @@
 <?php
 function slideBar(){
-      $path = CheckPath();
+      $path = CheckPath()['path'];
 
       function checkActive($path, $from_path){
         if($path == $from_path){
