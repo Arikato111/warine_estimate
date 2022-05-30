@@ -1,6 +1,4 @@
 <?php
-require('./lib/functional.php');
-require("./package.php");
 
 function RootContent()
 {

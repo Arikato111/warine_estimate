@@ -1,7 +1,7 @@
 <?php
-function headSub()
-{
-    return '<nav style="position: fixed; width: 100%;top:0;" class="main-header navbar navbar-expand navbar-white navbar-light">
+function headSub() {
+    return <<<HTML
+    <nav style="position: fixed; width: 100%;top:0;" class="main-header navbar navbar-expand navbar-white navbar-light">
     <!-- Left navbar links --> 
     <ul class="navbar-nav">
       <li class="nav-item">
@@ -43,5 +43,5 @@ function headSub()
      <a href="/logout"><li><button style="background-color: #1877f2; color: white;" class="btn">Logout</button></li></a>
     </ul>
   </nav>
-  ';
+  HTML;
 }

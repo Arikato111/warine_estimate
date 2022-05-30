@@ -5,6 +5,7 @@ function AboutPage(){
     //     exit;
     // }
     return title("About")
-    . '<div class="box">about page</div>'
-    ;
+    . <<<HTML
+    <div class="box">about page</div>
+    HTML;
  }

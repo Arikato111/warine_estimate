@@ -1,6 +1,6 @@
 <?php
 function slideBar(){
-      $path = CheckPath()['path'];
+      $path = '/' . getParams(0);
 
       function checkActive($path, $from_path){
         if($path == $from_path){
@@ -32,21 +32,28 @@ function slideBar(){
           "name"=>"Alexander Pierce",
           "img"=>"https://adminlte.io/themes/v3/dist/img/user2-160x160.jpg",
         ];
-        return  '<div class="sidebar">
+        $img = $user['img'];
+        $name = $user['name'];
+        return  <<<HTML
+                  <div class="sidebar">
                    <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                     <div class="image">
-                      <img src="'.$user['img'].'" class="img-circle elevation-2" alt="User Image">
+                      <img src="$img" class="img-circle elevation-2" alt="User Image">
                     </div>
                     <div class="info">
-                      <a href="/account" class="d-block" title="my account" >'.$user['name'].'</a>
+                      <a href="/account" class="d-block" title="my account" >$name</a>
                     </div>
                     </div>
-                  </div>';
+                  </div>
+                  HTML;
       }
 
   
-
-    return '<aside style="background-color: white;border-radius: 5px;border:white;position: fixed;" class="main-sidebar elevation-4">
+      $user_information = getUserInformation();
+      $user_memu_path = menu($path);
+      $check_active_link = checkActive('/link', $path);
+    return <<<HTML
+    <aside style="background-color: white;border-radius: 5px;border:white;position: fixed;" class="main-sidebar elevation-4">
     <!-- Brand Logo -->
     <a href="/" class="brand-link">
       <img src="/images/icon.png" alt="Warin Logo" class="brand-image img-circle elevation-3"
@@ -54,20 +61,18 @@ function slideBar(){
       <span style="color: black;" class="brand-text font-weight-dark">warinice</span>
     </a>
   
-    <!-- Sidebar -->'
-      . getUserInformation()
-      . '<!-- Sidebar Menu -->
+    <!-- Sidebar -->
+      $user_information
+      <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item menu-open">
             <ul class="nav nav-treeview">
-          '
-          . menu($path)
-          .'         
+          $user_memu_path    
           <li class="nav-item">
-            <a href="/link" class="nav-link '.checkActive('/link', $path).'">
+            <a href="/link" class="nav-link $check_active_link">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Simple Link
@@ -90,5 +95,5 @@ function slideBar(){
   </aside>
   <br>
   <div style="margin: 20px 0;"></div>
-  ';
+  HTML;
   }
