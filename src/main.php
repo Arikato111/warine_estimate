@@ -16,6 +16,7 @@ function RootContent()
         . slideBar()
         . '<div class="content-wrapper" style="min-height: 1329.62px;">'
         . SwitchPath([
+            Route('/techer-help', fn()=> TecherHelpPage()),
             Route('/logout', fn () => logoutSub()),
             Route('/contact', fn () => ContactPage()),
             Route('/about', fn () => AboutPage()),
