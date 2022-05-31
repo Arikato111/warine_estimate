@@ -7,7 +7,7 @@ function LoginPage(){
             $_SESSION["user"] = "logined";
             header("Location: /");
         } else {
-            $error = "Invalid username or password";
+            $error = '<div style="color: red;">Invalid username or password</div>';
         }
     }
 
@@ -20,7 +20,7 @@ function LoginPage(){
     <main>
         <div class="row">
             <div class="colm-logo">
-                <img src="/images/icon.png" alt="Logo">
+                <img class="mymove" src="/images/icon.png" alt="Logo">
             </div>
             <div class="colm-form">
                 <h3>การอาชีพวิทยาลัยวารินชำราบ <br> การประเมินบุคลากร</h3>

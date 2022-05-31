@@ -15,6 +15,7 @@ function slideBar(){
           ["name"=>"Home", "path"=>"/"],
           ["name"=>"About", "path"=>"/about"],
           ["name"=>"Contact", "path"=>"/contact"],
+          ["name"=>"ประเมินครูผู้ช่วย", "path"=>"/techer-help"],
         ];
         for ($i=0; $i<sizeof($menu);$i++){ 
           $content = $content . '<li class="nav-item">
@@ -56,7 +57,7 @@ function slideBar(){
     <aside style="background-color: white;border-radius: 5px;border:white;position: fixed;" class="main-sidebar elevation-4">
     <!-- Brand Logo -->
     <a href="/" class="brand-link">
-      <img src="/images/icon.png" alt="Warin Logo" class="brand-image img-circle elevation-3"
+      <img src="/images/icon.png" alt="Warin Logo" class="mymove brand-image img-circle elevation-3"
            style="opacity: .8">
       <span style="color: black;" class="brand-text font-weight-dark">warinice</span>
     </a>

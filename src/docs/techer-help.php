@@ -5,15 +5,36 @@ function TecherHelpPage(){
     <style>
         .doc-input {
             display: inline-block;
-            text-align: left;
+            text-align: center;
             margin-bottom: 100px;
+            /* padding: 0 10px; */
             width: 100%
+        }
+        .doc-title {
+            text-align: center;font-size: 25px;
         }
         .content {
             margin:40px 10vw 0 10vw;
             background-color: wheat;
             text-align: left;
         }
+        .table-input {
+            border: 2px gray solid;
+            border-radius: 10px;
+            background-color: #bababa54;
+            padding: 10px;
+            display: inline-block;
+            transition: .5s;
+        }
+        .table-input:hover {
+            transform: scale(1.05);
+        }
+        @media only screen and (max-width: 1000px){
+            .table-input:hover {
+                transform: none;
+            }
+        }
+        
     </style>
     <form method="post" action="">
     <div class="content">
@@ -27,7 +48,7 @@ function TecherHelpPage(){
         <div style="text-align: center;">
             <div>ส่วนที่ 1 : ข้อมูลของผู้รับประเมิน</div>
             <div>รอบการประเมิน</div>
-            <div class="doc-input">
+            <div style="text-align: left;" class="doc-input">
                 <div>
                     <input required type="radio" name="radio1" id="">
                     <label for="">ครั้งที่ 1 ( 1 ดุลาคม ... - 31 มีนาคม ... )</label>
@@ -116,7 +137,7 @@ function TecherHelpPage(){
                 </div>
             </div>
         </div>
-        <div>ส่วนที่สอง : สรุปผลการประเมิน</div>
+        <div class="doc-title">ส่วนที่สอง : สรุปผลการประเมิน</div>
         <div class="doc-input">
             <div>องด์ประกอบการประเมิน</div>
             <div>องด์ประกอบที่ 1 การประเมินประสิทธิภาพและประสิทธิผล การปฏิบัติงานมาตรฐานตำแหน่ง</div>
@@ -207,22 +228,22 @@ function componentOneSubject(){
             $namePB = $cop['name'] . "PB";
             $content = $content .
          <<<HTML
-         <div class="m-3">
+         <div class="m-3 table-input">
              <div>$title</div>
              <label for="">ประเมินตนเอง</label>
-             <select name="$name" id="">
-                 <option value="1">1</option>
-                 <option value="2">2</option>
-                 <option value="3">3</option>
-                 <option value="4">4</option>
-                </select>
-                <label for="">ของผู้บังคับบัญชา</label>
-                <select name="$namePB" id="">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                </select>
+             <div>
+                 <input type="radio" name="" value="1" id="">1
+                 <input type="radio" name="" value="2" id="">2
+                 <input type="radio" name="" value="3" id="">3
+                 <input type="radio" name="" value="4" id="">4
+            </div>
+            <label for="">ของผู้บังคับบัญชา</label>
+            <div>
+                <input type="radio" name="" value="1" id="">1
+                <input type="radio" name="" value="2" id="">2
+                <input type="radio" name="" value="3" id="">3
+                <input type="radio" name="" value="4" id="">4
+            </div>
             </div>
         HTML;
     }
@@ -280,11 +301,11 @@ function componentOneSubject(){
                </div>
                <div>**คะแนนประเมิน = คะแนนรวม x 80 หารด้วย 56</div>
                 <br>
-                <div>ด้านการเรียนรู้</div>
+                <div class="doc-title">ด้านการเรียนรู้</div>
                 $input_component_1
-                <div>ด้านการส่งเสริมและ สนับสนุนการจัดการเรียนรู้</div>
+                <div class="doc-title">ด้านการส่งเสริมและ สนับสนุนการจัดการเรียนรู้</div>
                 $input_component_2
-                <div>ด้านการพัฒนาตนเอง</div>
+                <div class="doc-title">ด้านการพัฒนาตนเอง</div>
                 $input_component_3
                 <div>
                     <label for="">คะแนนรวม</label>

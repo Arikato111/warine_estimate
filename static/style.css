@@ -1,4 +1,3 @@
-
 .box {
     padding: 10px;
     text-align: center;
@@ -218,5 +217,17 @@ footer {
         margin: 0 10px;
         width: 100%;
         display: inline-block;
+    }
+}
+
+.mymove {
+    animation: move 25s infinite linear;
+}
+
+@keyframes move {
+    from {
+        transform: rotate(0deg);
+    } to {
+        transform: rotate(360deg);
     }
 }
