@@ -1,0 +1,39 @@
+.doc-input {
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 100px;
+    /* padding: 0 10px; */
+    width: 100%
+}
+.doc-title {
+    text-align: center;font-size: 25px;
+}
+.content {
+    margin:40px 10vw 0 10vw;
+    background-color: wheat;
+    text-align: left;
+}
+.table-input {
+    border: 2px gray solid;
+    border-radius: 10px;
+    background-color: #bababa54;
+    padding: 10px;
+    display: inline-block;
+    transition: .5s;
+}
+.table-input:hover {
+    transform: scale(1.05);
+}
+
+input {
+    padding: 3px;
+    margin-bottom: 10px;
+    border-radius: 7px;
+    border: none;
+    width: auto;
+}
+@media only screen and (max-width: 1000px){
+    .table-input:hover {
+        transform: none;
+    }
+}

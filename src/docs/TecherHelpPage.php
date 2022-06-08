@@ -1,41 +1,9 @@
 <?php 
+styleImport('./static/teacherhelp.css');
+
 function TecherHelpPage(){
     $component_one = componentOneSubject();
     return title("แบบประเมินครูผู้ช่วย") . <<<HTML
-    <style>
-        .doc-input {
-            display: inline-block;
-            text-align: center;
-            margin-bottom: 100px;
-            /* padding: 0 10px; */
-            width: 100%
-        }
-        .doc-title {
-            text-align: center;font-size: 25px;
-        }
-        .content {
-            margin:40px 10vw 0 10vw;
-            background-color: wheat;
-            text-align: left;
-        }
-        .table-input {
-            border: 2px gray solid;
-            border-radius: 10px;
-            background-color: #bababa54;
-            padding: 10px;
-            display: inline-block;
-            transition: .5s;
-        }
-        .table-input:hover {
-            transform: scale(1.05);
-        }
-        @media only screen and (max-width: 1000px){
-            .table-input:hover {
-                transform: none;
-            }
-        }
-        
-    </style>
     <form method="post" action="">
     <div class="content">
         
@@ -43,12 +11,10 @@ function TecherHelpPage(){
             <div>แบบประเมินผลการปฏิบัติงานของข้าราชการครูและบุคลากรทางการศึกษา</div>
             <div>ตำแหน่งครูผู้ช่วย</div>
         </div>
-
-
-        <div style="text-align: center;">
+        <div style="text-align: center; ">
             <div>ส่วนที่ 1 : ข้อมูลของผู้รับประเมิน</div>
             <div>รอบการประเมิน</div>
-            <div style="text-align: left;" class="doc-input">
+            <div style="text-align: center;" class="doc-input">
                 <div>
                     <input required type="radio" name="radio1" id="">
                     <label for="">ครั้งที่ 1 ( 1 ดุลาคม ... - 31 มีนาคม ... )</label>

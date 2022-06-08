@@ -25,7 +25,7 @@ function HomePage()
             </div>
    HTML;
     }
-    return title("Home") . '<div class="box">'
+    return title("Home") . '<div class="box" style="text-align:center;">'
         . $content
         . '</div>';
 }

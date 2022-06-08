@@ -1,9 +1,8 @@
 <?php
 ob_start();
 session_start();
-require('./modules/wisit-single-page.php');
-require("./package.php");
-
+require('./package.php');
+require('./src/Main.php');
 ?>
 
 <!DOCTYPE html>
@@ -26,7 +25,7 @@ require("./package.php");
 
 <body>
     <div>
-        <?php echo RootContent(); ?>
+        <?php echo Main(); ?>
     </div>
     <script src="/static/script.js"></script>
     <!-- popper -->

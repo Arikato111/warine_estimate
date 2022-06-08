@@ -1,0 +1,55 @@
+.content {
+    margin:40px 10vw 0 10vw;
+    background-color: rgb(255, 255, 255);
+    text-align: left;
+    box-shadow: 1px 1px 5px  gray;
+    border-radius: 4px;
+}
+.head {
+    text-align: center;
+}
+.head-title {
+    font-size: 24px;
+}
+
+.m-select {
+    margin-right: 10px;
+}
+
+
+.m-l-3 {
+    margin-left: 10px;
+}
+.m-b-3 {
+    margin-bottom: 10px;
+}
+.t-c {
+    text-align: center;
+}
+.t-l {
+    text-align: left;
+}
+
+.t-r {
+    text-align: right;
+}
+
+.p-3 {
+    padding: 10px;
+}
+
+.p-t {
+    padding-top: 10px;
+}
+
+.p-l {
+    padding-top: 10px;
+}
+
+.p-r {
+    padding-right: 10px;
+}
+
+.p-b {
+    padding-bottom: 10px;
+}

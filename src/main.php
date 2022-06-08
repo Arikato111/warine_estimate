@@ -1,13 +1,15 @@
 <?php
+require ('./src/subject/head.php');
+require('./src/subject/slidebar.php');
+require('./src/pages/LoginPage.php');
 
-function RootContent()
-{
+function Main() {
     if (!isset($_SESSION['user'])) return LoginPage();  // check login 
 
-    function logoutSub()
-    {
+    if(getParams(0) == 'logout') {
         session_unset();
         header("Location: /");
+        die();
     }
 
     return
@@ -16,12 +18,12 @@ function RootContent()
         . slideBar()
         . '<div class="content-wrapper" style="min-height: 1329.62px;">'
         . SwitchPath([
-            Route('/techer-help', fn()=> TecherHelpPage()),
-            Route('/logout', fn () => logoutSub()),
-            Route('/contact', fn () => ContactPage()),
-            Route('/about', fn () => AboutPage()),
-            Route('/', fn () => HomePage()),
-            Route('*', fn () => '<div style="padding: 20px;font-size: 30px;">Not Found page click <a href="/"> here </a> to come back to website</div>'),
+            Route('/techer-no', 'src/docs/TecherHasNo'),
+            Route('/techer-help',  'src/docs/TecherHelpPage'),
+            Route('/contact', 'src/pages/ContactPage'),
+            Route('/about',  'src/pages/AboutPage'),
+            Route('/',  'src/pages/HomePage'),
+            Route('*', 'src/subject/NotFoundPage'),
         ]);
     '</div>
     </div>';

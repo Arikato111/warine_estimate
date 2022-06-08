@@ -15,7 +15,7 @@ function ContactPage(){
     function processInput(){
         $value = $_GET['user'];
         return title("Contact | Display") 
-            . '<div>'.$value.'</div>';
+            . '<div class="box">'.$value.'</div>';
     }
 
     if(isset($_GET['user'])){

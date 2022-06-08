@@ -18,8 +18,8 @@ function getPath(){
     return $real_path;
 }
 
-function Route($path, $callbakFunc){
-    if($path == '*') return $callbakFunc();
+function Route($path, $dir){
+    if($path == '*') return $dir;
 
     $getPath = explode('/', getPath());
     $Route_path = explode('/', $path);
@@ -28,13 +28,17 @@ function Route($path, $callbakFunc){
     for($i=0;$i< sizeof($Route_path); $i++){
         if($getPath[$i] != $Route_path[$i] && $Route_path[$i] != ':') return;
     }
-    return $callbakFunc();
+    return $dir;
 }
 
 function SwitchPath($Route){
     foreach ($Route as $value) {
         if ($value) {
-            return $value;
+            require_once($value . ".php"); // new import file
+            $value = explode('/', $value); // new get function name of function page
+            $value = $value[sizeof($value) -1]; // new get function name
+            $content = $value();
+            if($content) return $content;
         }
     }
 }
@@ -50,20 +54,7 @@ function getParams($position = -1)
     }
 }
 
-function import($dir)
-{
-    $getDir = glob($dir);
-    if (!empty($getDir)) {
-        foreach ($getDir as $file) {
-            if (str_contains(substr($file, 1), '.')) {
-                require_once("$file");
-            } else {
-                import("$file/*");
-            }
-        }
-    }
-}
-
 function title($title){
     return '<script>document.title = "' . $title . '"</script>';
 }
+
