@@ -131,7 +131,7 @@ function TecherHasNo () {
 
         <div class="content p-3">
             <div>ตอนที่ 2 ระดับความสำเร็จในการพัฒนางานที่เสนอฯ</div>
-            <div style="text-align:center;">
+            <div style="text-align:center;" class="o-f">
                 <table>
                     <thead>
                         <tr>
@@ -206,13 +206,13 @@ function TecherHasNo () {
 
             {$input_component_3}
 
-            <div class="content">
+            <div class="content m-b-5">
                 <div class="p-3">
                     <label for="">คะแนนรวม</label>
                     <input type="number" name="" id="">
                 </div>
             </div>
 
-        <div style="width: 500px; text-align: center;">::void</div>
+        <!-- <div style="width: 500px; text-align: center;">::void</div> -->
     HTML;
 }
