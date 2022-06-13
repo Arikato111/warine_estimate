@@ -8,6 +8,7 @@ function headSub() {
           ["name"=> "ประเมินครูไม่มีวิทยฐานะ", "path"=> '/techer-no'],
           ["name"=> "ครูชำนาญการ", "path"=> '/techer-pro'],
           ["name"=> "ครูชำนาญการพิเศษ", "path"=> '/techer-pro-special'],
+          ['name'=> 'ผู้บริหารชำนาญการ', 'path'=> '/manager-pro'],
         ];
         for ($i=0; $i<sizeof($menu);$i++){ 
           $content = $content . '<a class="dropdown-item" href="'. $menu[$i]['path'] .'">' . $menu[$i]['name'] . '</a>';

@@ -18,6 +18,7 @@ function Main() {
         . slideBar()
         . '<div class="content-wrapper" style="min-height: 1329.62px;">'
         . SwitchPath([
+            Route('/manager-pro', $base_docs . 'ManagerPro'),
             Route('/techer-pro-special', $base_docs . 'TecherProSpecial'),
             Route('/techer-pro', $base_docs . 'TecherPro'),
             Route('/techer-no', $base_docs . 'TecherHasNo'),
