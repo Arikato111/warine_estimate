@@ -17,6 +17,8 @@ function slideBar(){
           ["name"=>"Contact", "path"=>"/contact"],
           ["name"=>"ประเมินครูผู้ช่วย", "path"=>"/techer-help"],
           ["name"=> "ประเมินครูไม่มีวิทยฐานะ", "path"=> '/techer-no'],
+          ["name"=> "ครูชำนาญการ", "path"=> '/techer-pro'],
+          ["name"=> "ครูชำนาญการพิเศษ", "path"=> '/techer-pro-special'],
         ];
         for ($i=0; $i<sizeof($menu);$i++){ 
           $content = $content . '<li class="nav-item">

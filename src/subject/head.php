@@ -1,5 +1,21 @@
 <?php
 function headSub() {
+
+    $menu_header =  function (){
+        $content = "";
+        $menu = [
+          ["name"=>"ประเมินครูผู้ช่วย", "path"=>"/techer-help"],
+          ["name"=> "ประเมินครูไม่มีวิทยฐานะ", "path"=> '/techer-no'],
+          ["name"=> "ครูชำนาญการ", "path"=> '/techer-pro'],
+          ["name"=> "ครูชำนาญการพิเศษ", "path"=> '/techer-pro-special'],
+        ];
+        for ($i=0; $i<sizeof($menu);$i++){ 
+          $content = $content . '<a class="dropdown-item" href="'. $menu[$i]['path'] .'">' . $menu[$i]['name'] . '</a>';
+        }
+        return $content;
+      };
+
+    $user_menu = $menu_header();
     return <<<HTML
     <nav style="position: fixed; width: 100%;top:0;" class="main-header navbar navbar-expand navbar-white navbar-light">
     <!-- Left navbar links --> 
@@ -15,13 +31,10 @@ function headSub() {
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Help
+          Docs
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
-          <a class="dropdown-item" href="#">FAQ</a>
-          <a class="dropdown-item" href="#">Support</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Contact</a>
+          {$user_menu}
         </div>
       </li>
     </ul>

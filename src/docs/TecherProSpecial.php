@@ -1,7 +1,7 @@
 <?php
 styleImport('./src/docs/techer.css');
 
-function TecherHasNo () {
+function TecherProSpecial () {
 
     $form_input_component = function ($value_data) {
         $content = "";
@@ -72,13 +72,13 @@ function TecherHasNo () {
         ["title"=>"9 ยึดถือและปฏิบัติตามจรรยาบรรณของวิชาชีพ", "name"=>""],
         ["title"=>"10 มีวินัยและการรักษาวินัย", "name"=>""],
     ]);
-    return title("ครูไม่มีวิทยฐานะ") . 
+    return title("ครูชำนาญการพิเศษ") . 
     <<<HTML
-        <form action="/techer-no" method="post">
+        <form action="/techer-pro-special" method="post">
         <div class="content">
             <div class="head">
                 <div class="head-title">แบบประเมินผลการปฏิบัติงานของข้าราชการครูและบุคลากรทางการศึกษา</div>
-                <div class="head-title">ตำแหน่งครู ยังไม่มีวิทยฐานะ</div>
+                <div class="head-title">ตำแหน่งครูชำนาญการพิเศษ</div>
                 <div>( ทุกสังกัด )</div>
             </div>
         </div>
@@ -87,7 +87,7 @@ function TecherHasNo () {
             <div class="m-l-3 t-c t-3 p-3">
                 <div>แบบประเมินองค์ประกอบที่ 1</div>
                 <div>การประเมินประสิทธิภาพและประสิทธิผลการปฏิบัติงานตามมาตรฐานตำแหน่ง</div>
-                <div>ตำแหน่งครู ยังไม่มีวิทยฐานะ</div>
+                <div>ตำแหน่งครูชำนาญการพิเศษ</div>
             </div>
         </div>
 

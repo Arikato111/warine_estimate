@@ -11,15 +11,17 @@ function Main() {
         header("Location: /");
         die();
     }
-
+    $base_docs = './src/docs/';
     return
         '<div class="wrapper">'
         . headSub()
         . slideBar()
         . '<div class="content-wrapper" style="min-height: 1329.62px;">'
         . SwitchPath([
-            Route('/techer-no', 'src/docs/TecherHasNo'),
-            Route('/techer-help',  'src/docs/TecherHelpPage'),
+            Route('/techer-pro-special', $base_docs . 'TecherProSpecial'),
+            Route('/techer-pro', $base_docs . 'TecherPro'),
+            Route('/techer-no', $base_docs . 'TecherHasNo'),
+            Route('/techer-help',  $base_docs . 'TecherHelpPage'),
             Route('/contact', 'src/pages/ContactPage'),
             Route('/about',  'src/pages/AboutPage'),
             Route('/',  'src/pages/HomePage'),

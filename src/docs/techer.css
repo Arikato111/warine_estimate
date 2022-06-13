@@ -4,6 +4,7 @@
     text-align: left;
     box-shadow: 1px 1px 5px  gray;
     border-radius: 4px;
+    padding: 10px;
 }
 
 table, thead, tr, th, td {
@@ -67,4 +68,26 @@ table, thead, tr, th, td {
 
 .o-f {
     overflow: scroll;
+}
+
+button {
+    padding: 4px 6px;
+    border: none;
+    color: white;
+    border-radius: 4px;
+}
+button:active {
+    transform: scale(.9);
+}
+
+.bc-red {
+    background-color: red;
+}
+
+.bc-aqua {
+    background-color: aqua;
+}
+
+.bc-blue {
+    background-color: rgb(37, 34, 255);
 }
