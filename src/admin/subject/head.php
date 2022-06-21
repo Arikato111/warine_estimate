@@ -9,6 +9,7 @@ function headSub() {
           ["name"=> "ครูชำนาญการ", "path"=> '/techer-pro'],
           ["name"=> "ครูชำนาญการพิเศษ", "path"=> '/techer-pro-special'],
           ['name'=> 'ผู้บริหารชำนาญการ', 'path'=> '/manager-pro'],
+          ['name'=> 'ผู้บริหารชำนาญการพิเศษ', 'path'=> '/manager-pro-special'],
         ];
         for ($i=0; $i<sizeof($menu);$i++){ 
           $content = $content . '<a class="dropdown-item" href="'. $menu[$i]['path'] .'">' . $menu[$i]['name'] . '</a>';
@@ -18,17 +19,17 @@ function headSub() {
 
     $user_menu = $menu_header();
     return <<<HTML
-    <nav style="position: fixed; width: 100%;top:0;" class="main-header navbar navbar-expand navbar-white navbar-light">
+    <nav style="position: fixed; width: 100%;top:0;" class="main-header navbar navbar-expand navbar-dark navbar-dark">
     <!-- Left navbar links --> 
     <ul class="navbar-nav">
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="/" class="nav-link">Home</a>
+        <a href="/" class="nav-link">Homepage</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="/contact" class="nav-link">Contact</a>
+        <a href="/admin/contact" class="nav-link">Contact</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

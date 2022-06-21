@@ -1,6 +1,6 @@
 <?php
 function slideBar(){
-      $path = '/' . getParams(0);
+      $path = '/admin/' . getParams(1);
 
       function checkActive($path, $from_path){
         if($path == $from_path){
@@ -12,14 +12,8 @@ function slideBar(){
       function menu($path){
         $content = "";
         $menu = [
-          ["name"=>"Home", "path"=>"/"],
-          ["name"=>"About", "path"=>"/about"],
-          ["name"=>"Contact", "path"=>"/contact"],
-          ["name"=>"ประเมินครูผู้ช่วย", "path"=>"/techer-help"],
-          ["name"=> "ประเมินครูไม่มีวิทยฐานะ", "path"=> '/techer-no'],
-          ["name"=> "ครูชำนาญการ", "path"=> '/techer-pro'],
-          ["name"=> "ครูชำนาญการพิเศษ", "path"=> '/techer-pro-special'],
-          ['name'=> 'ผู้บริหารชำนาญการ', 'path'=> '/manager-pro'],
+          ["name"=>"Home", "path"=>"/admin/"],
+          ["name"=>"Contact", "path"=>"/admin/contact"],
         ];
         for ($i=0; $i<sizeof($menu);$i++){ 
           $content = $content . '<li class="nav-item">
@@ -56,14 +50,14 @@ function slideBar(){
   
       $user_information = getUserInformation();
       $user_memu_path = menu($path);
-      $check_active_link = checkActive('/link', $path);
+      $check_active_link = checkActive('/admin/link', $path);
     return <<<HTML
-    <aside style="background-color: white;border-radius: 5px;border:white;position: fixed;" class="main-sidebar elevation-4">
+    <aside style="position: fixed;" class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="/" class="brand-link">
       <img src="/images/icon.png" alt="Warin Logo" class="mymove brand-image img-circle elevation-3"
            style="opacity: .8">
-      <span style="color: black;" class="brand-text font-weight-dark">warinice</span>
+      <span class="brand-text font-weight-dark">Admin</span>
     </a>
   
     <!-- Sidebar -->
@@ -77,7 +71,7 @@ function slideBar(){
             <ul class="nav nav-treeview">
           $user_memu_path    
           <li class="nav-item">
-            <a href="/link" class="nav-link $check_active_link">
+            <a href="/admin/link" class="nav-link $check_active_link">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Simple Link

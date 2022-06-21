@@ -1,5 +1,5 @@
 <?php 
-styleImport('./static/teacherhelp.css');
+styleImport('./src/user/docs/techer.css');
 
 function TecherHelpPage(){
     $component_one = componentOneSubject();

@@ -1,5 +1,5 @@
 <?php
-styleImport('./src/docs/techer.css');
+styleImport('./src/user/docs/techer.css');
 
 function ManagerPro () {
 
