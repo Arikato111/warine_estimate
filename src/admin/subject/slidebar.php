@@ -14,6 +14,7 @@ function slideBar(){
         $menu = [
           ["name"=>"Home", "path"=>"/admin/"],
           ["name"=>"Contact", "path"=>"/admin/contact"],
+          ["name"=>"Member", "path"=>"/admin/member"],
         ];
         for ($i=0; $i<sizeof($menu);$i++){ 
           $content = $content . '<li class="nav-item">
