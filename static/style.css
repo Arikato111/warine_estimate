@@ -221,7 +221,7 @@ footer {
 }
 
 .mymove {
-    animation: move 25s infinite linear;
+    /* animation: move 25s infinite linear; */
 }
 
 @keyframes move {

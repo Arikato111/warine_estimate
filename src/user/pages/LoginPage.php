@@ -11,9 +11,9 @@ function LoginPage(){
         }
     }
 
-    function getError($error) {
-        if($error) return '<div style="color: red;">'. $error. '</div>';
-    }
+    // function getError($error) {
+    //     if($error) return '<div style="color: red;">'. $error. '</div>';
+    // }
 
     return  title("Login") .
     <<<HTML
