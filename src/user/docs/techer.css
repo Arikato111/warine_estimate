@@ -91,3 +91,11 @@ button:active {
 .bc-blue {
     background-color: rgb(37, 34, 255);
 }
+
+.selected {
+    max-width: 50vw;
+}
+
+input {
+    margin: 5px 0;
+}

@@ -220,9 +220,9 @@ footer {
     }
 }
 
-.mymove {
-    /* animation: move 25s infinite linear; */
-}
+/* .mymove {
+    animation: move 25s infinite linear;
+} */
 
 @keyframes move {
     from {
