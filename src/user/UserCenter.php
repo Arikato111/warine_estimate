@@ -10,6 +10,9 @@ function UserCenter() {
         . slideBar()
         . '<div class="content-wrapper" style="min-height: 1329.62px;">'
         . SwitchPath([
+            Route('/report-employee', $base_docs . 'reports/ReportEmployee'),
+
+            Route('/report-officer', $base_docs . 'reports/ReportOfficer'),
 
             Route('/report-techer-special', $base_docs . 'reports/ReportTecherSpecial'),
 

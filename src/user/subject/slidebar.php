@@ -21,7 +21,9 @@ function slideBar(){
           ["name"=> "ครูชำนาญการพิเศษ", "path"=> '/techer-pro-special'],
           // ['name'=> 'ผู้บริหารชำนาญการ', 'path'=> '/manager-pro'],
           // ['name'=> 'ผู้บริหารชำนาญการพิเศษ', 'path'=> '/manager-pro-special'],
-          ['name'=>'รายงานครูพิเศษสอน', 'path'=>'/report-techer-special']
+          ['name'=>'รายงานครูพิเศษสอน', 'path'=>'/report-techer-special'],
+          ['name'=> 'รายงานปฏิบัติงานเจ้าหน้าที่', 'path'=> '/report-officer'],
+          ['name'=> 'รายงานปฏิบัติงานพนักงานราชการ', 'path'=> '/report-employee'],
         ];
 
         if('admincheck') {

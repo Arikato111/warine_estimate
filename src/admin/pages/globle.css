@@ -1,12 +1,19 @@
 body {
     /* padding: 40px 10vw 0 10vw; */
 }
+
 .content {
-    margin:40px 10vw 0 10vw;
-    padding:20px 10px;
+    margin: 40px 10vw 0 10vw;
+    padding: 20px 10px;
     background-color: rgb(255, 255, 255);
     text-align: left;
     /* box-shadow: 1px 1px 5px  gray; */
     border: solid rgb(231, 231, 231) 1px;
     border-radius: 4px;
+}
+
+@media only screen and (max-width: 600px) {
+    .content {
+        margin: 40px 3vw 0 3vw;
+    }
 }
