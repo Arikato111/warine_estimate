@@ -231,3 +231,8 @@ footer {
         transform: rotate(360deg);
     }
 }
+
+.scroll {
+    height: 75vh;
+    overflow-y: scroll;
+}

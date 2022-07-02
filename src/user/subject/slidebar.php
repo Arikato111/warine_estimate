@@ -80,6 +80,7 @@ function slideBar(){
     <!-- Sidebar -->
       $user_information
       <!-- Sidebar Menu -->
+      <div class="scroll">
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu">
           <!-- Add icons to the links using the .nav-icon class
@@ -105,6 +106,7 @@ function slideBar(){
         </li>
         </ul>
       </nav>
+    </div>
       <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->
